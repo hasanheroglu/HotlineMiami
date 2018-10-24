@@ -153,6 +153,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126cec253ed77468c84c145e826ae535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelMap: {fileID: 2800000, guid: 25fee45ed69fa4952acc965443eca62e, type: 3}
+  prefabs:
+  - color: {r: 0, g: 1, b: 0, a: 0}
+    prefab: {fileID: 1434393397530770, guid: 527ba2330069c4e308e997a1f4decfd6, type: 2}
+  - color: {r: 0, g: 0, b: 0, a: 0}
+    prefab: {fileID: 1003155954106966, guid: 0665e4bbfb97c4f648711dc078161608, type: 2}
+  - color: {r: 1, g: 1, b: 1, a: 0}
+    prefab: {fileID: 1149674609543214, guid: 347315fd9f9dd4e3b85d69a329947cb0, type: 2}
 --- !u!1001 &76071559
 Prefab:
   m_ObjectHideFlags: 0
@@ -396,11 +404,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4076710840814688, guid: 527ba2330069c4e308e997a1f4decfd6, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.3231
+      value: 0.3228
       objectReference: {fileID: 0}
     - target: {fileID: 4076710840814688, guid: 527ba2330069c4e308e997a1f4decfd6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.1759
+      value: 0.9983
       objectReference: {fileID: 0}
     - target: {fileID: 4076710840814688, guid: 527ba2330069c4e308e997a1f4decfd6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -500,7 +508,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 845697981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3228, y: 0.9983, z: 0.00029182842}
+  m_LocalPosition: {x: 0.3228, y: 0.9983, z: -1.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
