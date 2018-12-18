@@ -4,10 +4,26 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets/Scripts" t="Include">
-        <e p="ColorToPrefab.cs" t="Include" />
-        <e p="LevelGenerator.cs" t="Include" />
-        <e p="PlayerMovement.cs" t="Include" />
-        <e p="SpriteLibrary.cs" t="Include" />
+        <e p="Image" t="Include">
+          <e p="SpriteLibrary.cs" t="Include" />
+        </e>
+        <e p="Level" t="Include">
+          <e p="ColorToPrefab.cs" t="Include" />
+          <e p="LevelGenerator.cs" t="Include" />
+        </e>
+        <e p="Mechanic" t="Include">
+          <e p="CameraFollow.cs" t="Include" />
+          <e p="CrosshairFollow.cs" t="Include" />
+        </e>
+        <e p="Player" t="Include">
+          <e p="Interact.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
+        </e>
+        <e p="Weapons" t="Include">
+          <e p="Bullet.cs" t="Include" />
+          <e p="Pistol.cs" t="Include" />
+          <e p="Weapon.cs" t="Include" />
+        </e>
       </e>
       <e p="HotlineMiami.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />

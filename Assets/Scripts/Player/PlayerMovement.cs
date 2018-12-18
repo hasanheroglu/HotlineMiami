@@ -1,29 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Weapons;
+
 namespace Player{
 	public class PlayerMovement : MonoBehaviour {
 
 		
 		[Range(1f, 10f)]
 		private float movementSpeed = 6f;
-
 		[Range(2f, 5f)]
 		private float movementSpeedMultiplier = 3f;
 		
 		private float rotationSpeed = 10f;
-
-		public Rigidbody2D rigidbody;
-
+		private Rigidbody2D rigidbody;
+		
+		public Vector3 direction;
+		public Weapon weapon;
+		public GameObject weaponHolder;
 
         // Use this for initialization
         private void Start () {
 			rigidbody = GetComponent<Rigidbody2D>();
-		}
+	        
+	        if(weapon != null)
+				weapon.transform.position = weaponHolder.transform.position;
+        }
 		
 		// Update is called once per frame
 		private void Update () {
 			RotateWithMouse();
+
+			if (Input.GetKeyDown(KeyCode.Mouse0) && weapon != null)
+				weapon.Attack(direction);
+
+			if (Input.GetKeyDown(KeyCode.Space) && weapon != null)
+				ThrowWeapon();
+
 		}
 
 		private void FixedUpdate(){
@@ -48,14 +61,31 @@ namespace Player{
 		private void RotateWithMouse(){
 			var mousePosition = Input.mousePosition;
 			mousePosition.z = 1;
-			mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+			
+			if(Camera.main != null)
+				mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+			else
+				Debug.Log("Camera not found!");
 
-			var direction = mousePosition - transform.position;
+			direction = mousePosition - transform.position;
 			direction = direction.normalized;
 			
 			var angle = Mathf.Atan2(direction.y, direction.x)*Mathf.Rad2Deg;
-			var rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 			transform.rotation = Quaternion.Euler(0,0, angle);
+		}
+
+
+		public void PickUpWeapon(Weapon newWeapon)
+		{
+			weapon = newWeapon;
+			weapon.transform.position = weaponHolder.transform.position;
+			weapon.transform.SetParent(this.gameObject.transform);
+		}
+
+		private void ThrowWeapon()
+		{
+			weapon.Throw(direction);
+			weapon = null;
 		}
 	}
 }

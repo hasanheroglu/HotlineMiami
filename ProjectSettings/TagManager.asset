@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpriteLibrary
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -47,6 +48,9 @@ TagManager:
     locked: 0
   - name: Walls
     uniqueID: 1528593619
+    locked: 0
+  - name: Items
+    uniqueID: 2925640801
     locked: 0
   - name: Character
     uniqueID: 2212815785
