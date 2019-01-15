@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4155147333309698}
   m_Layer: 0
   m_Name: WeaponPosition
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 6926474624037801865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,9 +35,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4318887854606744}
   - component: {fileID: 58309404530949862}
-  m_Layer: 0
+  - component: {fileID: 114308410541359098}
+  m_Layer: 10
   m_Name: InteractCollider
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +137,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.003, y: 0}
   serializedVersion: 2
-  m_Radius: 0.03
+  m_Radius: 0.025
 --- !u!61 &61543222097562600
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -151,10 +152,10 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00006715953, y: -0.000054597855}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0.01, z: 0, w: 0}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.04, y: 0.04}
-    newSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1.6, y: 1.6}
+    newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -173,8 +174,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 242a7ab0896984d92934bee52755bbcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 0}
   weapon: {fileID: 0}
   weaponHolder: {fileID: 1167449701820010}
+--- !u!114 &114308410541359098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318158962534240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c782d573fdd40b392b93676e898015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212304847366655966
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -209,12 +222,12 @@ SpriteRenderer:
   m_SortingLayerID: -2082151511
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5f71d07b4f5264e09850de02862a2917, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 436ad503f02ea4049973e1b1ebc2c12a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.6, y: 1.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

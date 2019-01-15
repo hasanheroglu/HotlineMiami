@@ -21,8 +21,8 @@ namespace Player
 			{
 				Debug.Log("You can pick up a weapon.");
 				
-				//if(_player.weapon != null)
-					//_player.weapon.Throw(_player.direction);
+				if(_player.weapon != null)
+					_player.weapon.Throw(_player.direction);
 
 				Weapon newWeapon = other.gameObject.GetComponent<Weapon>(); 
 				

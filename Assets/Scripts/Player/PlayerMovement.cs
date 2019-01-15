@@ -84,6 +84,7 @@ namespace Player{
 
 		private void ThrowWeapon()
 		{
+			weapon.transform.SetParent(null);
 			weapon.Throw(direction);
 			weapon = null;
 		}

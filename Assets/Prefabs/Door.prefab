@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4090150962003550}
   - component: {fileID: 212459900563426640}
-  - component: {fileID: 61467979787050602}
+  - component: {fileID: 65775515528021932}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -41,31 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61467979787050602
-BoxCollider2D:
+--- !u!65 &65775515528021932
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1057891453268814}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.00018590689}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.04, y: 0.04}
-    newSize: {x: 0.12, y: 0.12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04, y: 0.020292044}
-  m_EdgeRadius: 0
+  m_Size: {x: 1.6, y: 1.6, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &212459900563426640
 SpriteRenderer:
   m_ObjectHideFlags: 1
